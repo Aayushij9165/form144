@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Export Credit Guarantee Corporation of India Limited (Form number-144)</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 20px;
+    }
+    form {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 1200px;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+    h2, h3 {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 10px;
+      margin-top: 40px;
+      border-radius: 5px;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+    input, select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 100%;
+      max-width: 500px;
+      font-size: 15px;
+    }
+    button {
+      margin-top: 30px;
+      padding: 12px 40px;
+      background-color: #28a745;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+    .row-header, .row-group {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .row-header {
+      font-weight: bold;
+      background-color: #e6e6e6;
+      text-align: center;
+      padding: 10px;
+      border-radius: 5px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+  <script>
+    function toggleSection(selectId, sectionId) {
+      const select = document.getElementById(selectId);
+      const section = document.getElementById(sectionId);
+      section.style.display = select.value === "yes" ? "block" : "none";
+    }
+  </script>
+</head>
+<body>
+  <form method="post">
+    <h1>Export Credit Guarantee Corporation of India Limited (Form number-144)</h1>
+
+    <!-- Page 1 -->
+    <h2>Policy Details</h2>
+    <div class="grid-2">
+      <label>Policyholder Name: <input name="policyholder_name" /></label>
+      <label>Policy Number: <input name="policy_number" /></label>
+      <label>Policy Start Date: <input type="date" name="policy_start_date" /></label>
+      <label>Policy End Date: <input type="date" name="policy_end_date" /></label>
+    </div>
+
+    <!-- Page 2 -->
+    <h2>Details</h2>
+    <div class="grid-2">
+      <label>Max Liability: <input name="max_liability" /></label>
+      <label>Shipment Declaration Submitted Upto: <input type="date" name="shipment_date" /></label>
+    </div>
+
+    <h3>Buyer Info</h3>
+    <div class="grid-2">
+      <label>Buyer Name: <input name="buyer_name" /></label>
+      <label>Buyer Address: <input name="buyer_address" /></label>
+      <label>Buyer City: <input name="buyer_city" /></label>
+      <label>Buyer Country: <input name="buyer_country" /></label>
+      <label>Buyer Phone: <input name="buyer_phone" /></label>
+      <label>Buyer Fax: <input name="buyer_fax" /></label>
+      <label>Buyer Email: <input name="buyer_email" /></label>
+      <label>Buyer Website: <input name="buyer_website" /></label>
+      <label>Buyer Contact: <input name="buyer_contact" /></label>
+      <label>Buyer Mobile: <input name="buyer_mobile" /></label>
+      <label>Buyer Reg: <input name="buyer_reg" /></label>
+      <label>Buyer VAT: <input name="buyer_vat" /></label>
+    </div>
+
+    <label>Alternate Buyer Details?
+      <select id="alt_toggle" onchange="toggleSection('alt_toggle', 'alt_section')">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+    </label>
+    <div id="alt_section" class="grid-2 hidden">
+      <h3>Alternate Buyer</h3>
+      <label>Alt Address: <input name="alt_address" /></label>
+      <label>Alt City: <input name="alt_city" /></label>
+      <label>Alt Country: <input name="alt_country" /></label>
+      <label>Alt Phone: <input name="alt_phone" /></label>
+      <label>Alt Fax: <input name="alt_fax" /></label>
+      <label>Alt Email: <input name="alt_email" /></label>
+      <label>Alt Website: <input name="alt_website" /></label>
+      <label>Alt Contact: <input name="alt_contact" /></label>
+      <label>Alt Mobile: <input name="alt_mobile" /></label>
+      <label>Alt Reg: <input name="alt_reg" /></label>
+      <label>Alt VAT: <input name="alt_vat" /></label>
+    </div>
+
+    <label>Parent Company Details?
+      <select id="parent_toggle" onchange="toggleSection('parent_toggle', 'parent_section')">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+    </label>
+    <div id="parent_section" class="grid-2 hidden">
+      <h3>Parent Company Info</h3>
+      <label>Parent Name: <input name="parent_name" /></label>
+      <label>Parent Address: <input name="parent_address" /></label>
+      <label>Parent City: <input name="parent_city" /></label>
+      <label>Parent Country: <input name="parent_country" /></label>
+      <label>Parent Phone: <input name="parent_phone" /></label>
+      <label>Parent Fax: <input name="parent_fax" /></label>
+      <label>Parent Email: <input name="parent_email" /></label>
+      <label>Parent Website: <input name="parent_website" /></label>
+      <label>Parent Contact: <input name="parent_contact" /></label>
+      <label>Parent Mobile: <input name="parent_mobile" /></label>
+      <label>Parent Reg: <input name="parent_reg" /></label>
+      <label>Parent VAT: <input name="parent_vat" /></label>
+    </div>
+
+    <h3>Buyer Bank Info</h3>
+    <div class="grid-2">
+      <label>Bank Name: <input name="bank_name" /></label>
+      <label>Bank Address: <input name="bank_address" /></label>
+      <label>Bank City: <input name="bank_city" /></label>
+      <label>Bank Country: <input name="bank_country" /></label>
+      <label>Bank Phone: <input name="bank_phone" /></label>
+      <label>Bank Fax: <input name="bank_fax" /></label>
+      <label>Bank Email: <input name="bank_email" /></label>
+      <label>Bank Website: <input name="bank_website" /></label>
+      <label>Bank A/C No: <input name="bank_ac" /></label>
+      <label>Swift Code: <input name="bank_swift" /></label>
+    </div>
+
+    <h3>Goods Info</h3>
+    <div class="grid-2">
+      <label>Goods Description: <input name="goods_desc" /></label>
+      <label>Export Country: <input name="export_country" /></label>
+      <label>Destination Country: <input name="destination_country" /></label>
+    </div>
+
+    <!-- Page 3 -->
+    <h2>Order Details</h2>
+    <div class="grid-2">
+      <label>Order No: <input name="order_no" /></label>
+      <label>Order Amount: <input name="order_amount" /></label>
+      <label>Terms of Payment: <input name="terms_payment" /></label>
+      <label>Shipping Schedule 1: <input name="ship_sched1" /></label>
+      <label>Shipping Schedule 2: <input name="ship_sched2" /></label>
+      <label>Shipping Schedule 3: <input name="ship_sched3" /></label>
+      <label>Anticipated Country: <input name="anticipated_country" /></label>
+      <label>Product Value: <input name="product_value" /></label>
+      <label>Product Description: <input name="product_desc" /></label>
+    </div>
+
+    <!-- Table Section -->
+    <label>Do you want to fill Table Section?
+      <select id="table_toggle" onchange="toggleSection('table_toggle', 'table_section')">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+    </label>
+    <div id="table_section" class="hidden">
+      <h3>Shipment Table</h3>
+      <div class="row-header">
+        <div>S.No</div><div>Date of Shipment</div><div>Value (in Rs.)</div>
+        <div>Terms of Payment</div><div>Due Date of Payment</div>
+        <div>Date of Realization</div><div>Reason for Delay</div>
+      </div>
+      <!-- 4 rows -->
+      <div class="row-group">
+        <input name="row1_col1" placeholder="1" />
+        <input name="row1_col2" /><input name="row1_col3" />
+        <input name="row1_col4" /><input name="row1_col5" />
+        <input name="row1_col6" /><input name="row1_col7" />
+      </div>
+      <div class="row-group">
+        <input name="row2_col1" placeholder="2" />
+        <input name="row2_col2" /><input name="row2_col3" />
+        <input name="row2_col4" /><input name="row2_col5" />
+        <input name="row2_col6" /><input name="row2_col7" />
+      </div>
+      <div class="row-group">
+        <input name="row3_col1" placeholder="3" />
+        <input name="row3_col2" /><input name="row3_col3" />
+        <input name="row3_col4" /><input name="row3_col5" />
+        <input name="row3_col6" /><input name="row3_col7" />
+      </div>
+      <div class="row-group">
+        <input name="row4_col1" placeholder="4" />
+        <input name="row4_col2" /><input name="row4_col3" />
+        <input name="row4_col4" /><input name="row4_col5" />
+        <input name="row4_col6" /><input name="row4_col7" />
+      </div>
+    </div>
+
+    <!-- Section 16 & 17 -->
+    <label>Fill Section 16 & 17?
+      <select id="sec_toggle" onchange="toggleSection('sec_toggle', 'sec_section')">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+    </label>
+    <div id="sec_section" class="grid-2 hidden">
+      <h3>Section 16 & 17</h3>
+      <label>sec16a_i: <input name="sec16a_i" /></label>
+      <label>sec16a_ii: <input name="sec16a_ii" /></label>
+      <label>sec16a_iii: <input name="sec16a_iii" /></label>
+      <label>sec16a_iv: <input name="sec16a_iv" /></label>
+      <label>sec16b: <input name="sec16b" /></label>
+      <label>sec16b_para: <input name="sec16b_para" /></label>
+      <label>sec17: <input name="sec17" /></label>
+      <label>sec17_para: <input name="sec17_para" /></label>
+    </div>
+
+    <!-- Cheque -->
+    <h3>Cheque Details</h3>
+    <div class="grid-2">
+      <label>Cheque No: <input name="cheque_no" /></label>
+      <label>Cheque Date: <input type="date" name="cheque_date" /></label>
+      <label>Cheque Amount: <input name="cheque_amount" /></label>
+      <label>Branch: <input name="branch" /></label>
+      <label>Cheque City: <input name="cheque_city" /></label>
+      <label>Cheque Submit Date: <input type="date" name="cheque_submit_date" /></label>
+    </div>
+
+    <!-- Page 4 -->
+    <label>Do you want to fill Page 4?
+      <select id="page4_toggle" onchange="toggleSection('page4_toggle', 'page4_section')">
+        <option value="no">No</option>
+        <option value="yes">Yes</option>
+      </select>
+    </label>
+    <div id="page4_section" class="section hidden">
+      <h2>Page 4</h2>
+      <div class="grid-2">
+        <label>Years1: <input name="years1" /></label>
+        <label>Years2: <input name="years2" /></label>
+        <label>Years3: <input name="years3" /></label>
+        <label>Nature of Concern: <input name="nature_concern" /></label>
+        <label>Buyer Class1: <input name="buyer_class1" /></label>
+        <label>Buyer Class2: <input name="buyer_class2" /></label>
+        <label>Buyer Class3: <input name="buyer_class3" /></label>
+        <label>Fin1: <input name="fin1" /></label>
+        <label>Fin2: <input name="fin2" /></label>
+        <label>Legal1: <input name="legal1" /></label>
+        <label>Legal2: <input name="legal2" /></label>
+        <label>Legal3: <input name="legal3" /></label>
+      </div>
+    </div>
+
+    <button type="submit">Generate PDF</button>
+  </form>
+</body>
+</html>
